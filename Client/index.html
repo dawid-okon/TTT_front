@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tic Tac Toe Game</h1>
+
+    <div id="authSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div id="gameSection" style="display:none;">
+        <button id="createGameButton">Create New Game</button>
+        <button id="backToHomeButton" style="display:none;">Back to Home</button>
+
+        <h2>Current Player: <span id="currentPlayer">X</span></h2>
+
+        <h2>Active Games</h2>
+        <table id="activeGamesTable">
+            <thead>
+                <tr>
+                    <th>Game ID</th>
+                    <th>Players</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="activeGames"></tbody>
+        </table>
+
+        <h2>Completed Games</h2>
+        <div id="completedGames"></div>
+
+        <input type="hidden" id="currentGameId" value="">
+
+        <div id="gameBoard" style="display:none;">
+            <h2>Game Board</h2>
+            <table>
+                <tr>
+                    <td data-row="0" data-col="0"></td>
+                    <td data-row="0" data-col="1"></td>
+                    <td data-row="0" data-col="2"></td>
+                </tr>
+                <tr>
+                    <td data-row="1" data-col="0"></td>
+                    <td data-row="1" data-col="1"></td>
+                    <td data-row="1" data-col="2"></td>
+                </tr>
+                <tr>
+                    <td data-row="2" data-col="0"></td>
+                    <td data-row="2" data-col="1"></td>
+                    <td data-row="2" data-col="2"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
